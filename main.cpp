@@ -7,12 +7,13 @@ See `Enumerate.h` for more info
 */
 
 #include "Enumerate.h"
+#include <iostream> 
 
 int main() {
     std::vector<int> test{1, 2, 3, 4, 5};
     
     f(test);
-    g(Test);
+    g(test);
     h(test);
 }
 
@@ -51,7 +52,7 @@ int h(std::vector<int>& ints)
 
     for(int i : enumerate(ints))
     {
-        result += i;
+        std::cout << "index: " << i << std::endl;
     }
 
     return result;
