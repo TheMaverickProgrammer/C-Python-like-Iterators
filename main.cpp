@@ -56,7 +56,7 @@ int h(std::map<std::string, int>& map)
 
     for(auto i : enumerate(map))
     {
-        // i will be type std::string
+        // i will be index to the key-value pair at map[i]
         std::cout << "index: " << i << std::endl;
     }
 
