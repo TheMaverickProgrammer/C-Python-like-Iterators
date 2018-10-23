@@ -7,6 +7,7 @@ Using modern C++ and templates, provides a function `enumerate` that easily retu
 #include <iostream>
 #include <vector>
 #include <map>
+#include <string>
 
 int main(char** argv, int argc) {
     std::vector<int> myVec({10,9,8,7,6,5,4,3,2,1});
@@ -19,9 +20,11 @@ int main(char** argv, int argc) {
         ++n; // will increase all values in the list after printing
     }
 
-    // Capture just the index
-    for(int i : enumerate(myVec)) {
-        std::cout << "index: " << i << std::endl;
+    std::map<std::string, int> map{{"a", 10}, {"b", 9},{"c", 7}, {"d", 8}};
+    
+    // Capture just the index or key
+    for(auto i : enumerate(map)) {
+        std::cout << "key: " << i << std::endl;
     }
 }
 ```
