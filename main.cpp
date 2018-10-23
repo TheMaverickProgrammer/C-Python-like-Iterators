@@ -8,13 +8,17 @@ See `Enumerate.h` for more info
 
 #include "Enumerate.h"
 #include <iostream> 
+#include <vector>
+#include <map>
+#include <string>
 
 int main() {
     std::vector<int> test{1, 2, 3, 4, 5};
-    
     f(test);
     g(test);
-    h(test);
+    
+    std::map<std::string, int> map{{"a", 10}, {"b", 9},{"c", 7}, {"d", 8}};
+    h(map);
 }
 
 int f(std::vector<int>& ints)
@@ -46,12 +50,13 @@ int g(std::vector<int>& ints)
 }
 
 
-int h(std::vector<int>& ints)
+int h(std::map<std::string, int>& map)
 {
     int result = 0;
 
-    for(int i : enumerate(ints))
+    for(auto i : enumerate(map))
     {
+        // i will be type std::string
         std::cout << "index: " << i << std::endl;
     }
 
