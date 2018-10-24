@@ -1,6 +1,10 @@
 # C-Python-like-Iterators
 Header only and using modern C++ 17 and templates, provides a function `enumerate` that easily returns key-value pairs for any standard container type as seen in the Python programming language.
 
+# Notes on index and key-type deduction
+Index values are always `size_t`. If you want the index, use that.
+For map types that have a key, the resolved variable type needs to be that type. e.g. `map<string, int>` the for loop will be `for(string key : enumerate(myMap)`
+
 # Minimal Working Example
 ```
 #include "Enumerate.h"
@@ -23,7 +27,7 @@ int main(int argc, char** argv) {
     std::map<std::string, int> map{{"a", 10}, {"b", 9},{"c", 7}, {"d", 8}};
     
     // Capture just the index
-    for(int index : enumerate(map)) {
+    for(size_t index : enumerate(map)) {
         // index for key-value pair as if it was sequential
         std::cout << "index: " << index << std::endl;
     }
