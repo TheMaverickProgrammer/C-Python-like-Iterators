@@ -3,7 +3,9 @@ Header only and using modern C++ 17 and templates, provides a function `enumerat
 
 # Notes on index and key-type deduction
 Index values are always `size_t`. If you want the index, use that.
-For map types that have a key, the resolved variable type needs to be that type. e.g. `map<string, int>` the for loop will be `for(string key : enumerate(myMap)`
+For map types that have a key, the resolved variable type needs to be that type.
+
+See the comments in the code sample below
 
 # Minimal Working Example
 ```
