@@ -23,9 +23,15 @@ int main(int argc, char** argv) {
     std::map<std::string, int> map{{"a", 10}, {"b", 9},{"c", 7}, {"d", 8}};
     
     // Capture just the index
-    for(auto i : enumerate(map)) {
-        // i is the index for key-value pair map[i]
-        std::cout << "index: " << i << std::endl;
+    for(int index : enumerate(map)) {
+        // index for key-value pair as if it was sequential
+        std::cout << "index: " << index << std::endl;
+    }
+    
+    // Capture just the key
+    for(std::string key : enumerate(map)) {
+        // the resolved value type has to be the same as the map's key value
+        std::cout << "key: " << key << std::endl;
     }
 }
 ```
