@@ -21,7 +21,7 @@ struct enumerate_wrapper
 
     struct dissolving_pair : public std::pair<size_t, reference_type> {
         dissolving_pair(size_t index, reference_type ref) : std::pair<size_t, reference_type>(index, ref) { ; }
-        operator int() { return this->first; }
+        operator size_t() { return this->first; }
         template<reference_type> reference_type get() { return this->second; }
     };
 
@@ -74,6 +74,7 @@ struct enumerate_wrapper_map
     struct dissolving_map  : public std::pair<size_t, reference_type> {
         dissolving_map(size_t index, reference_type ref) : std::pair<size_t, reference_type>(index, ref) { ; }
         operator key_type() {return this->second.first.data(); }
+        operator size_t() { return this->first; }
         template<reference_type> reference_type get() { return this->second; }
     };
 
