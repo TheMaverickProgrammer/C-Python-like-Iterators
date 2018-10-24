@@ -1,5 +1,5 @@
-# C-Python-like-Iterators
-Header only and using modern C++ 17 and templates, provides a function `enumerate` that easily returns key-value pairs for any standard container type as seen in the Python programming language.
+# C++ Python-like-Iterators
+Header only and using modern **C++ 17** and templates, provides a function `enumerate` that easily returns key-value pairs for any standard container type as seen in the Python programming language.
 
 # Notes on index and key-type deduction
 Index values are always `size_t`. If you want the index, use that.
@@ -38,6 +38,13 @@ int main(int argc, char** argv) {
     for(std::string key : enumerate(map)) {
         // the resolved value type has to be the same as the map's key type
         std::cout << "key: " << key << std::endl;
+    }
+    
+    // Capture the index and the items
+    for(const auto& [index, item] : enumerate(map)) {
+        // Decompose the item into keys and values
+        const auto& [key, value] = item;
+        std::cout << "index: " << index << " key: " << key << std::endl;
     }
 }
 ```
