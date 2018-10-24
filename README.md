@@ -30,7 +30,7 @@ int main(int argc, char** argv) {
     
     // Capture just the key
     for(std::string key : enumerate(map)) {
-        // the resolved value type has to be the same as the map's key value
+        // the resolved value type has to be the same as the map's key type
         std::cout << "key: " << key << std::endl;
     }
 }
