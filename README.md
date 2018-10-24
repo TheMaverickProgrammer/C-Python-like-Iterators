@@ -9,7 +9,7 @@ Header only and using modern C++ 17 and templates, provides a function `enumerat
 #include <map>
 #include <string>
 
-int main(char** argv, int argc) {
+int main(int argc, char** argv) {
     std::vector<int> myVec({10,9,8,7,6,5,4,3,2,1});
 
     // Capture index and value
