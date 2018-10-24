@@ -2,7 +2,8 @@
 Author: Maverick Peppers
 Date: 10/22/2018
 Description: Code additions made from a blog post describing the concept. 
-Additions allow the option for just an index value to be used just like python.
+Additions allow the option for just an index value to be used just like python as well as 
+support for queriying just the key from map types.
 
 Further reading:  https://therocode.net/web/tmpblog/2018/10/for-each-with-index.html
 
