@@ -1,6 +1,8 @@
 # C++ Python-like-Iterators
 Header only and using modern **C++ 17** and templates, provides a function `enumerate` that easily returns key-value pairs for any standard container type as seen in the Python programming language.
 
+Tested on x86-64 gcc 
+
 # Notes on index and key-type deduction
 Index values are always `size_t`. If you want the index, use that.
 For map types that have a key, the resolved variable type needs to be that type.
